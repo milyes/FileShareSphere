@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INTELLIGENCE - Live</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="flex items-center justify-center min-h-screen px-4">
+    <div class="w-full max-w-md bg-[#0a0a23] rounded-2xl p-6 shadow-2xl border border-[#0ff] cyberpunk-card">
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold text-cyan-400">
+                <i class="fas fa-microchip mr-2"></i>INTELLIGENCE
+            </h1>
+            <div class="flex items-center">
+                <div class="status-indicator"></div>
+                <span class="ml-2 text-white">milyes</span>
+            </div>
+        </div>
+
+        <h2 class="text-xl mb-6 text-center font-semibold">Neural Interface v2.077</h2>
+
+        <div class="mb-4 relative">
+            <input
+                id="questionInput"
+                type="text"
+                placeholder="Input query data..."
+                class="w-full p-3 rounded-lg bg-[#00111e] text-white border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+            <div class="absolute bottom-0 left-0 w-full h-1 shimmer-bar"></div>
+        </div>
+
+        <button
+            id="sendButton"
+            class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mb-6 cyberpunk-button"
+        >
+            <i class="fas fa-paper-plane mr-2"></i>Transmit
+        </button>
+
+        <div class="mb-4">
+            <div class="flex items-center mb-2">
+                <h3 class="text-cyan-400">Neural Output</h3>
+                <div class="ml-2 data-indicator"></div>
+            </div>
+            <div id="responseBox" class="w-full p-3 bg-[#00111e] rounded-lg min-h-24 border border-cyan-400 text-white overflow-auto response-box"></div>
+        </div>
+
+        <div class="text-xs text-gray-500 text-center mt-4">
+            <p>Secure Connection • Neural Interface v2.077 • <span class="text-cyan-400">MILYES CORP</span></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
